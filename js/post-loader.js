@@ -243,13 +243,13 @@ class PostLoader {
     const commentsSection = document.getElementById('giscus-comments');
     if (!commentsSection) return;
 
-    // Giscus 설정 (실제 사용 시 수정 필요)
+    // Giscus 설정
     const script = document.createElement('script');
     script.src = 'https://giscus.app/client.js';
-    script.setAttribute('data-repo', 'your-username/your-repo'); // 실제 저장소로 변경
-    script.setAttribute('data-repo-id', 'YOUR_REPO_ID'); // 실제 ID로 변경
+    script.setAttribute('data-repo', 'seokh0123-svg/seokh0123-svg.github.io');
+    script.setAttribute('data-repo-id', 'R_kgDOKjQqJQ'); // 실제 저장소 ID로 변경 필요
     script.setAttribute('data-category', 'General');
-    script.setAttribute('data-category-id', 'YOUR_CATEGORY_ID'); // 실제 ID로 변경
+    script.setAttribute('data-category-id', 'DIC_kwDOKjQqJc4Cb8YJ'); // 실제 카테고리 ID로 변경 필요
     script.setAttribute('data-mapping', 'pathname');
     script.setAttribute('data-strict', '0');
     script.setAttribute('data-reactions-enabled', '1');
