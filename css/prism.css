@@ -1,0 +1,320 @@
+/* Prism.js 테마 - 다크/라이트 모드 지원 */
+
+/* 기본 코드 블록 스타일 */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: var(--text-primary);
+  background: none;
+  text-shadow: none;
+  font-family: 'Fira Code', 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-size: 1em;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* 코드 블록 */
+pre[class*="language-"] {
+  padding: 1.5rem;
+  margin: 2rem 0;
+  overflow: auto;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px var(--shadow);
+}
+
+/* 인라인 코드 */
+:not(pre) > code[class*="language-"] {
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  background-color: var(--bg-secondary);
+  color: var(--accent-color);
+  font-size: 0.9em;
+}
+
+/* 선택된 텍스트 */
+pre[class*="language-"]::-moz-selection,
+pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection,
+code[class*="language-"] ::-moz-selection {
+  text-shadow: none;
+  background: rgba(0, 123, 255, 0.2);
+}
+
+pre[class*="language-"]::selection,
+pre[class*="language-"] ::selection,
+code[class*="language-"]::selection,
+code[class*="language-"] ::selection {
+  text-shadow: none;
+  background: rgba(0, 123, 255, 0.2);
+}
+
+/* 라이트 모드 색상 */
+:root {
+  --prism-comment: #6a9955;
+  --prism-keyword: #0000ff;
+  --prism-string: #a31515;
+  --prism-function: #795e26;
+  --prism-variable: #001080;
+  --prism-number: #098658;
+  --prism-constant: #0070c1;
+  --prism-class: #267f99;
+  --prism-tag: #800000;
+  --prism-attr-name: #ff0000;
+  --prism-attr-value: #0451a5;
+  --prism-punctuation: #393a34;
+  --prism-operator: #393a34;
+  --prism-property: #0451a5;
+  --prism-selector: #800000;
+  --prism-regex: #d16969;
+  --prism-important: #e90;
+  --prism-builtin: #0000ff;
+  --prism-char: #d73a49;
+  --prism-symbol: #032f62;
+  --prism-deleted: #d73a49;
+  --prism-inserted: #28a745;
+  --prism-changed: #e36209;
+  --prism-namespace: #267f99;
+}
+
+/* 다크 모드 색상 */
+[data-theme="dark"] {
+  --prism-comment: #6a9955;
+  --prism-keyword: #569cd6;
+  --prism-string: #ce9178;
+  --prism-function: #dcdcaa;
+  --prism-variable: #9cdcfe;
+  --prism-number: #b5cea8;
+  --prism-constant: #4fc1ff;
+  --prism-class: #4ec9b0;
+  --prism-tag: #569cd6;
+  --prism-attr-name: #92c5f9;
+  --prism-attr-value: #ce9178;
+  --prism-punctuation: #d4d4d4;
+  --prism-operator: #d4d4d4;
+  --prism-property: #92c5f9;
+  --prism-selector: #d7ba7d;
+  --prism-regex: #d16969;
+  --prism-important: #e90;
+  --prism-builtin: #569cd6;
+  --prism-char: #d73a49;
+  --prism-symbol: #032f62;
+  --prism-deleted: #d73a49;
+  --prism-inserted: #28a745;
+  --prism-changed: #e36209;
+  --prism-namespace: #4ec9b0;
+}
+
+/* 토큰 스타일 */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: var(--prism-comment);
+  font-style: italic;
+}
+
+.token.punctuation {
+  color: var(--prism-punctuation);
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: var(--prism-number);
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: var(--prism-string);
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: var(--prism-operator);
+  background: none;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: var(--prism-keyword);
+}
+
+.token.function,
+.token.class-name {
+  color: var(--prism-function);
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+  color: var(--prism-regex);
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+/* 라인 번호 (선택사항) */
+.line-numbers .line-numbers-rows {
+  border-right: 1px solid var(--border-color);
+}
+
+.line-numbers-rows > span:before {
+  color: var(--text-muted);
+}
+
+/* 코드 복사 버튼 (선택사항) */
+.code-copy-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+pre[class*="language-"]:hover .code-copy-btn {
+  opacity: 1;
+}
+
+.code-copy-btn:hover {
+  background: var(--accent-color);
+  color: white;
+}
+
+/* 특정 언어별 추가 스타일 */
+.language-javascript .token.function,
+.language-typescript .token.function {
+  color: var(--prism-function);
+}
+
+.language-css .token.selector {
+  color: var(--prism-selector);
+}
+
+.language-css .token.property {
+  color: var(--prism-property);
+}
+
+.language-html .token.tag {
+  color: var(--prism-tag);
+}
+
+.language-html .token.attr-name {
+  color: var(--prism-attr-name);
+}
+
+.language-html .token.attr-value {
+  color: var(--prism-attr-value);
+}
+
+/* JSON 특별 스타일 */
+.language-json .token.property {
+  color: var(--prism-attr-name);
+}
+
+.language-json .token.string {
+  color: var(--prism-string);
+}
+
+.language-json .token.number {
+  color: var(--prism-number);
+}
+
+.language-json .token.boolean {
+  color: var(--prism-keyword);
+}
+
+.language-json .token.null {
+  color: var(--prism-comment);
+}
+
+/* YAML 특별 스타일 */
+.language-yaml .token.atrule {
+  color: var(--prism-attr-name);
+}
+
+.language-yaml .token.string {
+  color: var(--prism-string);
+}
+
+.language-yaml .token.number {
+  color: var(--prism-number);
+}
+
+.language-yaml .token.boolean {
+  color: var(--prism-keyword);
+}
+
+/* Markdown 특별 스타일 */
+.language-markdown .token.title {
+  color: var(--prism-keyword);
+  font-weight: bold;
+}
+
+.language-markdown .token.bold {
+  font-weight: bold;
+}
+
+.language-markdown .token.italic {
+  font-style: italic;
+}
+
+.language-markdown .token.url {
+  color: var(--prism-string);
+  text-decoration: underline;
+}
+
+/* 반응형 조정 */
+@media (max-width: 768px) {
+  pre[class*="language-"] {
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .code-copy-btn {
+    position: static;
+    display: block;
+    margin-top: 0.5rem;
+    opacity: 1;
+  }
+}
