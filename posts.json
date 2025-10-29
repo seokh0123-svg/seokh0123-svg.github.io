@@ -1,0 +1,44 @@
+[
+  {
+    "file": "example.md",
+    "title": "GitHub Pages 정적 블로그 구축하기",
+    "date": "2025-01-26",
+    "tags": [
+      "JavaScript",
+      "Web",
+      "GitHub",
+      "Blog"
+    ],
+    "category": "Development",
+    "description": "GitHub Pages를 활용하여 마크다운 기반의 정적 블로그를 구축하는 방법을 알아봅니다.",
+    "excerpt": "안녕하세요! 이번 포스트에서는 GitHub Pages를 활용하여 마크다운 기반의 정적 블로그를 구축하는 방법에 대해 알아보겠습니다.\r \r \r \r 정적 블로그의 장점은 다음과 같습니다:\r \r - : 서버 사이드 렌더링이 없어 매우 빠릅니다\r - : GitHub Pages는 무료로 제공됩니다\r - : 서버가 없어 해킹 위험이 적습니다\r - : Git을 통한 완..."
+  },
+  {
+    "file": "getting-started.md",
+    "title": "블로그 시작하기",
+    "date": "2025-01-25",
+    "tags": [
+      "Tutorial",
+      "Beginner",
+      "Guide"
+    ],
+    "category": "Tutorial",
+    "description": "블로그를 처음 시작하는 분들을 위한 가이드입니다.",
+    "excerpt": "블로그를 시작하는 것은 생각보다 간단합니다! 이 가이드를 따라하시면 누구나 쉽게 시작할 수 있습니다.\r \r \r \r 블로그를 시작하기 전에 다음이 필요합니다:\r \r 1. : 무료로 만들 수 있습니다\r 2. : 간단한 명령어만 알면 됩니다\r 3. : 10분이면 배울 수 있습니다\r \r \r \r \r \r `pages/` 폴더에 새로운 마크다운 파일을 만듭니다:"
+  },
+  {
+    "file": "css-tips.md",
+    "title": "CSS로 멋진 UI 만들기 - 실용적인 팁 10가지",
+    "date": "2025-01-24",
+    "tags": [
+      "CSS",
+      "UI",
+      "Design",
+      "Frontend",
+      "Tips"
+    ],
+    "category": "Web Development",
+    "description": "CSS를 활용하여 더욱 아름답고 사용자 친화적인 웹 인터페이스를 만드는 실용적인 팁들을 소개합니다.",
+    "excerpt": "웹 개발에서 CSS는 단순히 스타일링을 위한 도구가 아닙니다. 잘 활용하면 사용자 경험을 크게 향상시킬 수 있는 강력한 도구입니다. 오늘은 실무에서 바로 적용할 수 있는 CSS 팁들을 소개해드리겠습니다.\r \r \r \r CSS 변수를 사용하면 색상, 폰트, 간격 등을 체계적으로 관리할 수 있습니다.\r \r \r \r \r \r CSS 변수와 `prefers-color-..."
+  }
+]

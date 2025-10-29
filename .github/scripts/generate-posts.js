@@ -20,7 +20,7 @@ const posts = files.map((filename) => {
   const content = fs.readFileSync(filePath, 'utf8');
 
   // Front Matter 파싱
-  const frontMatterMatch = content.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
+  const frontMatterMatch = content.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n([\s\S]*)$/);
   let metadata = {};
   let postContent = content;
 
@@ -29,7 +29,7 @@ const posts = files.map((filename) => {
     postContent = frontMatterMatch[2];
 
     // Front Matter 라인 파싱
-    const lines = frontMatter.split('\n');
+    const lines = frontMatter.split(/\r?\n/);
     lines.forEach((line) => {
       const colonIndex = line.indexOf(':');
       if (colonIndex > 0) {
